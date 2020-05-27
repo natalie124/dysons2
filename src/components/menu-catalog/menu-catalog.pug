@@ -1,0 +1,27 @@
+section.menu-catalog
+  .container
+    h2.title Каталог
+    .menu-catalog__row
+      .menu-catalog__column
+        a.menu-catalog__link(href="#")
+          .menu-catalog__wrapper
+            span Фены
+            +picture-png-webp("hairdryers", 555, 330, "Фены")
+      //- .menu-catalog__column
+      //-   .menu-catalog__row
+      .menu-catalog__column.menu-catalog__column--middle
+        a.menu-catalog__link(href="#")
+          .menu-catalog__wrapper
+            span Стайлеры
+            +picture-png-webp("styling-tools", 270, 335, "Стайлеры")
+      .menu-catalog__column.menu-catalog__column--middle.menu-catalog__column--big
+        a.menu-catalog__link.menu-catalog__link--small(href="#")
+          .menu-catalog__wrapper
+            span Увлажнители
+            +picture-png-webp("humidifiers", 270, 154, "Увлажнители")
+        a.menu-catalog__link.menu-catalog__link--small(href="#")
+          .menu-catalog__wrapper
+            span Пылесосы
+            +picture-png-webp("hoovers", 555, 33, "Пылесосы")
+
+

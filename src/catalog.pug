@@ -1,0 +1,24 @@
+extends pug/layout
+
+block variables
+  -let title = "Уход за волосами";
+
+block content
+  .pagination
+    .container
+      ul.pagination__list
+        li.pagination__item
+          a.pagination__link(href="main.html") Магазин
+        li.pagination__item
+          a.pagination__link(href="#") Каталог
+        li.pagination__item
+          a.pagination__link(href="#") Уход за волосами
+
+  main
+    include components/catalog/catalog
+    include components/reviews/reviews
+    include components/advantages/advantages
+
+
+
+

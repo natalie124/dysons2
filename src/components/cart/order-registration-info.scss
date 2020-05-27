@@ -1,0 +1,99 @@
+.order-registration-info {
+  min-width: 343px;
+  max-width: 365px;
+  width: 31.5%;
+  padding: 10px 40px 30px;
+
+  background-color: $white;
+  border-radius: 4px;
+
+  @media (max-width: $mobile) {
+    min-width: 300px;
+    max-width: 100%;
+    width: 100%;
+    padding: 25px 10px 10px;
+  }
+
+  &__item {
+    padding-top: 30px;
+
+    border-bottom: 2px solid #e1e1e1;
+
+    &:last-of-type {
+      border: none;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    margin: 0 0 25px;
+    padding: 0;
+
+    @include font-m(18px, 1.2, #272727);
+    letter-spacing: 0.005em;
+  }
+
+  &__price {
+    width: 100%;
+    margin: 0 0 27px;
+    padding: 0;
+
+    @include font-m(18px, 1.2, $fuchsia);
+    letter-spacing: 0.005em;
+  }
+
+  &__text {
+    width: 100%;
+    margin: 0 0 15px;
+
+    @include font-r(15px, 24px, #535353);
+  }
+
+  &__submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    padding: 23px 25px 17px 20px;
+    margin: 0 0 15px;
+
+    @include font-r(19px, 1.2, $white);
+    text-decoration: none;
+
+    background-color: $fuchsia;
+    border: none;
+    border-radius: 4px;
+
+    transition: background-color;
+    transition-duration: 0.3s;
+
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+     background-color: #22b25c;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+
+    &:disabled {
+      color: #f8f5f5;
+
+      background-color: #ebebeb;
+      border-color: #ebebeb;
+
+      cursor: default;
+    }
+
+    svg {
+      width: 23px;
+      height: 23px;
+      margin-right: 20px;
+
+      fill: $white;
+    }
+  }
+}

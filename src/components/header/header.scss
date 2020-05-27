@@ -1,0 +1,405 @@
+.header {
+  width: 100%;
+
+  color: $black-font;
+  background-color: $white;
+
+  @media (max-width: $mobile) {
+    &__main-menu {
+      display: none;
+    }
+
+    &__wrapper {
+      padding: 12px 20px 13px 10px;
+    }
+  }
+
+  &__menu {
+    box-shadow: 0 1px 0 0 $grey-border;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  &__menu-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    width: 40px;
+    height: 37px;
+    margin: 0 15px 0 0;
+    padding: 10px;
+
+    background-color: transparent;
+    border: none;
+
+    @media (max-width: $mobile) {
+      display: flex;
+    }
+
+    span {
+      width: 20px;
+      height: 3px;
+
+      background-color: #555555;
+      border-radius: 1.5px;
+    }
+  }
+
+  &__logo {
+    display: block;
+
+    width: 97px;
+    height: 28px;
+    margin-right: 70px;
+
+    text-decoration: none;
+
+    transition-property: opacity;
+    transition-duration: 0.3s;
+
+    @media (max-width: $tablet) {
+      margin-right: 50px;
+    }
+
+    @media (max-width: $mobile) {
+      margin-right: 30px;
+    }
+
+    svg {
+      width: 100%;
+      height: auto;
+
+      fill: $black;
+
+      will-change: fill;
+      transition-property: fill;
+      transition-duration: 0.3s;
+    }
+
+    &:hover,
+    &:focus {
+      svg {
+        fill: $fuchsia;
+      }
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  &__phone {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-right: 70px;
+
+    @include font-r(20px, 1.2, $black-font);
+    text-decoration: none;
+
+    transition-property: color, opacity;
+    transition-duration: 0.3s;
+
+    @media (max-width: $tablet) {
+      margin-right: 50px;
+    }
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
+
+    svg {
+      width: 15px;
+      height: 23px;
+      margin-right: 15px;
+
+      fill: $fuchsia;
+    }
+
+    &:hover,
+    &:focus {
+      color: $fuchsia;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  &__search {
+    position: relative;
+
+    margin: 0 30px 0 auto;
+
+    @media (max-width: $tablet) {
+      margin-left: 0;
+    }
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
+
+    form {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      width: 100%;
+      height: 35px;
+    }
+
+    button {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 35px;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+
+      border: none;
+      background-color: transparent;
+
+      transition-property: opacity;
+      transition-duration: 0.3s;
+
+      cursor: pointer;
+      outline: none;
+
+      &:hover,
+      &:focus {
+        svg {
+          fill: $fuchsia;
+        }
+      }
+
+      &:active {
+        opacity: 0.5;
+      }
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+
+      fill: #d9d9d9;
+
+      will-change: fill;
+      transition-property: fill;
+      transition-duration: 0.3s;
+    }
+
+    input {
+      position: relative;
+      z-index: 1;
+
+      width: 200px;
+      height: 35px;
+      padding: 15px 15px 15px 50px;
+
+      border: 2px solid transparent;
+      border-radius: 3px;
+      background-color: transparent;
+
+      @include font-l(17px, 1.2, #080808);
+
+      transition-property: border-color, width;
+      transition-duration: 0.3s, 0.6s;
+
+      &:focus {
+        border-color: $grey-border;
+
+        outline: none;
+      }
+    }
+  }
+
+  &__favourites {
+    position: relative;
+
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding-right: 2px;
+    margin-left: 40px;
+
+    @include font-b(14px, 1.2, $fuchsia);
+    text-decoration: none;
+
+    transition-property: color, opacity;
+    transition-duration: 0.3s;
+
+    @media (max-width: $tablet) {
+      margin-left: auto;
+    }
+
+    p {
+      display: none;
+
+      margin: 0;
+      padding: 0;
+
+      @include font-m(16px, 1.2, rgba(38, 38, 38, 0.9));
+      letter-spacing: 0.16px;
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 33px;
+      height: 29px;
+
+      fill: $fuchsia;
+
+      transition-property: transform;
+      transition-duration: 0.3s;
+    }
+
+    &:hover,
+    &:focus {
+      color: $black-font;
+
+      svg {
+        transform: scale(1.2);
+      }
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  &__favourites-number {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 33px;
+    height: 29px;
+    padding-bottom: 4px;
+    padding-right: 1px;
+    margin-right: 15px;
+
+    @media (max-width: $tablet) {
+      margin-right: 0;
+    }
+  }
+
+  &__cart {
+    position: relative;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    min-height: 35px;
+    margin-left: 40px;
+
+    text-decoration: none;
+
+    transition-property: opacity;
+    transition-duration: 0.3s;
+
+    @media (max-width: $tablet) {
+      margin-left: 25px;
+    }
+
+
+    @media (max-width: $mobile) {
+      margin-left: 14px;
+    }
+
+    p {
+      display: none;
+
+      margin: 0;
+      padding: 0;
+
+      @include font-m(16px, 1.2, rgba(38, 38, 38, 0.9));
+      letter-spacing: 0.16px;
+    }
+
+    svg {
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      width: 35px;
+      height: 35px;
+      margin-right: 15px;
+
+      fill: $fuchsia;
+
+      transition-property: transform;
+      transition-duration: 0.3s;
+
+      @media (max-width: $tablet) {
+        margin-right: 0;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      svg {
+        transform: scale(1.2);
+      }
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  &__cart-number {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 35px;
+    height: 35px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    margin-right: 18px;
+
+    @include font-b(14px, 1.2, $white);
+
+    @media (max-width: $tablet) {
+      margin-right: 0;
+    }
+  }
+
+  &__cart-price {
+    @include font-m(17px, 1.2, #080808);
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+}

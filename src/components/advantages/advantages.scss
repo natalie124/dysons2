@@ -1,0 +1,73 @@
+.advantages {
+  width: 100%;
+
+  &__wrapper {
+    margin-top: 30px;
+    padding-top: 60px;
+    padding-bottom: 55px;
+
+    border-top: 1px solid rgba($black, 0.14);
+
+    @media (max-width: $mobile) {
+      padding-top: 30px;
+      padding-bottom: 15px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin-bottom: 20px;
+
+    @media (max-width: $mobile) {
+      max-width: 200px;
+      margin-bottom: 35px;
+
+      text-align: center;
+
+      flex-direction: column;
+    }
+
+      svg {
+        width: 41px;
+        height: 54px;
+        margin-right: 25px;
+
+        fill: $fuchsia;
+
+        @media (max-width: $mobile) {
+          margin-right: 0;
+          margin-bottom: 15px;
+        }
+      }
+
+      p {
+        margin: 0;
+        padding: 0;
+
+        @include font-r(20px, 1.2, $black);
+      }
+  }
+}
+

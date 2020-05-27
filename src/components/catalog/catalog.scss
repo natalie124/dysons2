@@ -1,0 +1,139 @@
+.catalog {
+  width: 100%;
+
+  background-color: #f7f7f7;
+
+  &__filters {
+    padding-bottom: 35px;
+    padding-left: 30px;
+
+    @media (max-width: $tablet) {
+      padding-left: 0;
+    }
+
+    form {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__check {
+    label {
+      display: inline-block;
+      vertical-align: baseline;
+
+      margin-right: 13px;
+      margin-bottom: 12px;
+      padding: 10px 20px;
+
+      @include font-r(15px, 1.2, #888787);
+      letter-spacing: 0.005em;
+
+      background-color: $white;
+      border-radius: 4px;
+
+      transition-property: background-color, color;
+      transition-duration: 0.3s;
+
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        color: $black-font;
+      }
+    }
+
+    input:checked + label {
+      color: $white;
+
+      background-color: $fuchsia;
+    }
+  }
+
+  &__select {
+    position: relative;
+
+    background-color: $white;
+
+    &::after {
+      position: absolute;
+      top: 11px;
+      right: 16px;
+      z-index: 0;
+
+      width: 10px;
+      height: 10px;
+      margin-left: 30px;
+
+      border-top: solid 2px #555555;
+      border-right: solid 2px #555555;
+
+      transform: rotate(135deg);
+
+      content: "";
+    }
+    select {
+      padding: 10px 38px 10px 20px;
+
+      @include font-r(15px, 1.2, #888787);
+      letter-spacing: 0.005em;
+
+      border: none;
+      background-color: transparent;
+
+      transition-property: color;
+      transition-duration: 0.3s;
+
+      appearance: none;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        color: $black-font;
+      }
+    }
+  }
+
+  &__show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 0 75px;
+
+    @media (max-width: $mobile) {
+      padding-top: 0;
+      padding-bottom: 24px;
+    }
+
+    button {
+      margin: 0;
+      padding: 20px 60px;
+
+      @include font-r(19px, 1.2, $white);
+
+      border: none;
+      border-radius: 2px;
+      background-color: #191919;
+
+      animation: none;
+
+      transition-property: opacity;
+      transition-duration: 0.3s;
+
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        animation: linear 1.2s light infinite;
+      }
+
+      &:active {
+        opacity: 0.5;
+        animation: none;
+      }
+    }
+  }
+}

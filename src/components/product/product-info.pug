@@ -1,0 +1,27 @@
+.product-info
+  .product-info__container
+    span.product-info__old-price 129 900
+    span.product-info__current-price <span>31 990</span> ₽
+    a.product-info__btn.product-info__btn--cart(href="cart.html")
+      +svg("cart", 23, 23)
+      | В корзину
+    button.product-info__btn.product-info__btn--buy(type="button")
+      +svg("mouse", 18, 28 )
+      | Купить в 1 клик
+  .product-info__container
+    p.product-info__availability
+      span.product-info__availability-icon
+        span
+        span.active
+        span.active
+      | В наличии
+    .product-info__advantages
+      p
+        +svg("box", 16, 18)
+        | Доставка по Москве за 2 часа
+      p
+        +svg("box", 16, 18)
+        | Доставка по России за 2-3 дня
+      p
+        +svg("shield", 15, 18)
+        | Гарантия 2 года

@@ -1,0 +1,20 @@
+.cart {
+  background-color: #f7f7f7;
+
+  &__order-registration {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    width: 100%;
+    padding-bottom: 150px;
+
+    @media (max-width: $tablet) {
+      padding-bottom: 50px;
+    }
+
+    @media (max-width: $mobile) {
+      flex-wrap: wrap;
+    }
+  }
+}

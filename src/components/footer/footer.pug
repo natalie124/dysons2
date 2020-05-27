@@ -1,0 +1,28 @@
+footer.footer
+  .footer__nav
+    .main-menu.main-menu--dark
+      .container
+        .main-menu__wrapper
+          ul.main-menu__list
+            each item in menuItems
+              li.main-menu__item
+                a.main-menu__link(href="#") !{item}
+    .container
+      .footer__content
+        a.footer__logo(href="#" title="Логотип Dysons")
+         +svg("logo", 78, 22)
+        .footer__phones
+          p Служба поддержки
+          a.footer__phone(href="tel:+74957732285")
+            +svg("phone", 15, 23)
+            | +7 (495) 773-22-85
+        .footer__info
+          p.footer__text Изображения и тексты принадлежат <a href="#">The Dyson-shops</a>
+          p.footer__text Все фотоматериалы и тексты используются для демонстрации. Использование контента возможно только с разрешения <a href="#">www.dyson-shops.com</a>.
+          p.footer__text 111524, город Москва, улица Электродная, дом 2 строение 29.
+          p.footer__text ООО "Альфа Групп" ОГРН 1197746408925
+      .footer__copyright
+        p.footer__text ©All Right Reserved. <a href=#>The dyson-shops.com</a>
+
+
+

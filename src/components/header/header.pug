@@ -1,0 +1,36 @@
+header.header
+  nav.header__nav
+    .header__menu
+      .header__wrapper.container
+        button.header__menu-btn.js-mobile-menu-btn(type="button" title="Открыть меню")
+          span
+          span
+          span
+        a.header__logo(href="#" title="Логотип Dysons")
+          +svg("logo", 97, 28)
+
+        a.header__phone(href="tel:+74957732285")
+          +svg("phone", 15, 23)
+          | +7 (495) 773-22-85
+        .header__search
+          form
+            button(type="submit" title="Найти")
+              +svg("loupe", 20, 20)
+            input(type="search" placeholder="Поиск")
+        a.header__favourites(href="#" title="Избранное")
+          +svg("heart", 33, 29)
+          span.header__favourites-number 12
+          p Избранное
+        a.header__cart(href="#" title="Корзина")
+          +svg("cart", 35, 35)
+          span.header__cart-number 25
+          span.header__cart-price 155 899 ₽
+          p Корзина
+
+    .header__main-menu.main-menu
+      .container
+        .main-menu__wrapper
+          ul.main-menu__list
+            each item in menuItems
+              li.main-menu__item
+                a.main-menu__link(href="#") !{item}

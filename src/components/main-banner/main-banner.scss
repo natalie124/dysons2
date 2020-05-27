@@ -1,0 +1,297 @@
+.main-banner {
+  position: relative;
+
+  width: 100%;
+
+  overflow-x: hidden;
+
+  &__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &__item {
+    position: relative;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    min-width: 100%;
+    width: 100%;
+
+    background-color: #312a2c;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    width: 100%;
+    max-width: calc(100vw - 150px);
+    min-height: 100%;
+    margin: 0 auto;
+    padding-right: 54%;
+    padding-bottom: 7.1%;
+    padding-top: 13%;
+
+    @media (max-width: $laptop) {
+      padding-top: 7.1%;
+    }
+
+    @media (max-width: $mobile) {
+      max-width: 100%;
+      padding: 23% 5% 6%;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    width: 50%;
+    height: 100%;
+
+    @media (max-width: $mobile) {
+     width: 100%;
+    }
+
+    img {
+      display: block;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+
+  &__category {
+    display: inline-block;
+    vertical-align: baseline;
+
+    width: 100%;
+    margin: 0 0 3.9%;
+    padding: 0;
+
+    @include font-l(42px, 1.2, $white);
+    letter-spacing: 0.01em;
+    text-decoration: none;
+
+    transition-property: color, opacity;
+    transition-duration: 0.3s;
+
+    @media (max-width: $desktop) {
+      font-size: 2.92vw;
+    }
+
+    @media (max-width: $mobile) {
+      margin-bottom: 5px;
+
+      font-size: 24px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $fuchsia;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    vertical-align: baseline;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    @include font-monts-b(72px, 1, $white);
+    letter-spacing: 0.01em;
+    text-decoration: none;
+
+    transition-property: color, opacity;
+    transition-duration: 0.3s;
+
+    @media (max-width: $desktop) {
+      font-size: 5vw;
+    }
+
+    @media (max-width: $mobile) {
+      margin-bottom: 10px;
+
+      font-size: 36px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $fuchsia;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+
+    sup {
+      font-size: 24px;
+    }
+  }
+
+  &__promotion {
+    text-align: right;
+
+    width: 100%;
+    margin: 0 0 7.9%;
+    padding: 0;
+
+    @include font-m(18px, 1.2, $white);
+    letter-spacing: 0.01em;
+
+    @media (max-width: $desktop) {
+      font-size: 1.25vw;
+    }
+
+    @media (max-width: $mobile) {
+      margin-bottom: 20px;
+
+      text-align: left;
+      font-size: 18px;
+    }
+  }
+
+  &__advantages {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 100%;
+    margin: 0 0 7.9%;
+    padding: 0;
+
+    @include font-r(16px, 24px, $grey-font-light);
+    letter-spacing: 0.01em;
+
+    @media (max-width: $desktop) {
+      font-size: 1.12vw;
+    }
+
+    @media (max-width: $mobile) {
+      margin-bottom: 25px;
+
+      font-size: 16px;
+    }
+
+    svg {
+      width: 20px;
+      height: 39px;
+      margin-right: 25px;
+
+      fill: $grey-font-light;
+      opacity: 0.25;
+
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+  }
+
+  &__buy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 100%;
+  }
+
+  &__price {
+    margin-bottom: 5px;
+
+    @include font-m(48px, 1.2, $white);
+
+    @media (max-width: $desktop) {
+      font-size: 3.34vw;
+    }
+
+    @media (max-width: $mobile) {
+      margin-bottom: 20px;
+
+      font-size: 48px;
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    top: calc(50% - 34px);
+
+    width: 100%;
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &__nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 1366px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__pagination {
+    position: absolute;
+    bottom: 5%;
+    z-index: 3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
+
+    .swiper-pagination-bullet {
+      width: 13px;
+      height: 13px;
+      margin-right: 18px;
+
+      background-color: $white;
+      border-radius: 50%;
+
+      transition-property: background-color;
+      transition-duration: 0.3s;
+
+      cursor: pointer;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: $fuchsia;
+    }
+  }
+}

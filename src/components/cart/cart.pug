@@ -1,0 +1,9 @@
+section.cart
+  .container
+    h1.page-title.page-title--left  Оформление заказа
+    .cart__form.js-cart-form
+      form(action="#" method="post")
+        include cart-items
+        .cart__order-registration
+          include order-registration-form
+          include order-registration-info

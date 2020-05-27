@@ -1,0 +1,52 @@
+.product-description {
+  width: 100%;
+  margin-bottom: 40px;
+
+  &__product {
+    width: 100%;
+    margin: 0 0 15px;
+    padding: 0;
+
+    @include font-b(42px, 48px, $black-font);
+    letter-spacing: 0.01em;
+
+    @media (max-width: $tablet) {
+      font-size: 36px;
+    }
+  }
+
+  &__article {
+    width: 100%;
+    margin: 0 0 15px;
+    padding: 0;
+
+    @include font-r(15px, 1.2, #999999);
+    letter-spacing: 0.01em;
+  }
+
+  &__title {
+    width: 100%;
+    margin: 0 0 15px;
+    padding: 0;
+
+    @include font-b(16px, 1.2, $black-font);
+  }
+
+  &__text-title {
+    width: 100%;
+    margin: 0 0 10px;
+    padding: 0;
+
+    @include font-r(13px, 18px, #999999);
+    letter-spacing: 0.01em;
+  }
+
+  &__text {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    @include font-r(13px, 18px, #999999);
+    letter-spacing: 0.01em;
+  }
+}

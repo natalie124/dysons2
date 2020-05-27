@@ -1,0 +1,52 @@
+section.order-registration-form
+  .order-registration-form__item
+    h2.order-registration-form__title Контактные данные
+    .input-item
+      label(for="order-registration-name") Ваше имя
+      input(type="text" name="name" id="order-registration-name" required)
+    .input-item
+      label(for="order-registration-phone") Телефон
+      input(type="tel" name="phone" id="order-registration-phone" required)
+    .input-item
+      label(for="order-registration-email") Электронная почта
+      input(type="email" name="email" id="order-registration-email" required)
+
+  .order-registration-form__item
+    h2.order-registration-form__title Адрес доставки
+    .input-item
+      label(for="order-registration-city") Город
+      input(type="text" name="city" id="order-registration-city" required)
+    .input-item
+      label(for="order-registration-street") Улица
+      input(type="text" name="street" id="order-registration-street" required)
+    .input-item-container
+      .input-item
+        label(for="order-registration-house") Дом
+        input(type="text" name="house" id="order-registration-house" required)
+      .input-item
+        label(for="order-registration-flat") Кв / офис
+        input(type="text" name="flat" id="order-registration-flat" required)
+
+  .order-registration-form__item
+    h2.order-registration-form__title Способ доставки
+    .input-check
+      input(type="radio" name="delivery" id="order-registration-delivery-on-moscow" value="on-moscow")
+      label(for="order-registration-delivery-on-moscow") Курьерская доставка по Москве в пределах МКАД <span>300 <span>₽</span></span>
+    .input-check
+      input(type="radio" name="delivery" id="order-registration-delivery-outside-moscow" value="outside-moscow" checked)
+      label(for="order-registration-delivery-outside-moscow") Стоимость доставки за пределами МКАД составляет <span>700 <span>₽</span></span>
+    .input-check
+      input(type="radio" name="delivery" id="order-registration-delivery-sdec" value="sdec")
+      label(for="order-registration-delivery-sdec") Доставка по России / СДЭК <span>800 <span>₽</span></span>
+    .input-check
+      input(type="radio" name="delivery" id="order-registration-delivery-pony" value="pony")
+      label(for="order-registration-delivery-pony") Доставка по России / Пони экспресс <span>500 <span>₽</span></span>
+
+  .order-registration-form__item
+    h2.order-registration-form__title Способ оплаты
+    .input-check
+      input(type="radio" name="payment" id="order-registration-payment-courier" value="courier")
+      label(for="order-registration-payment-courier") При получении курьеру
+    .input-check
+      input(type="radio" name="payment" id="order-registration-payment-card" value="card" checked)
+      label(for="order-registration-payment-card") Оплата картой на сайте

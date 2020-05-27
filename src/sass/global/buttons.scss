@@ -1,0 +1,171 @@
+.button-buy {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+  padding: 3.9% 6.9%;
+
+  @include font-r(19px, 1.2, $white);
+  text-decoration: none;
+
+  background-color: $fuchsia;
+  border-radius: 2px;
+
+  animation: none;
+
+  transition-property: background-color, opacity, border-radius;
+  transition-duration: 0.3s, 0.3s, 0.75s, 0.6s;
+
+  @media (max-width: $mobile) {
+    min-width: 270px;
+    max-width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $black;
+    border-radius: 20px;
+
+    animation: linear 1.2s light infinite;
+  }
+
+  &:active {
+    opacity: 0.5;
+
+    animation: none;
+  }
+}
+
+.button-arrow {
+  position: relative;
+
+  width: 68px;
+  height: 68px;
+  margin: 0;
+  padding: 0;
+
+  background-color: #363636;
+  border: none;
+
+  transition-property: background-color;
+  transition-duration: 0.3s;
+
+  cursor: pointer;
+
+  @media (max-width: $tablet) {
+    width: 60px;
+    height: 60px;
+  }
+
+  &::before {
+    position: absolute;
+    top: calc(50% - 13px);
+
+    width: 26px;
+    height: 26px;
+
+    background-color: transparent;
+    border-top: 2px solid #e1e1e1;
+    border-right: 2px solid #e1e1e1;
+
+    transition-property: border-color;
+    transition-duration: 0.3s;
+
+    content: "";
+  }
+
+  &--next {
+    &::before {
+      right: calc(50% - 7px);
+
+      transform: rotate(45deg);
+    }
+  }
+
+  &--prev {
+    &::before {
+      left: calc(50% - 7px);
+
+      transform: rotate(-135deg);
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: rgba($white, 0.5);
+
+    &::before {
+      border-color: black;
+    }
+  }
+}
+
+.button-close {
+  position: relative;
+  z-index: 10;
+
+  width: 40px;
+  height: 40px;
+  padding: 20px;
+
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+
+  transition-property: opacity;
+  transition-duration: 0.3s;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+
+    &:before,
+    &:after {
+      background-color: $black;
+    }
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &::before {
+    position: absolute;
+    top: calc(50% - 12px);
+
+    width: 2px;
+    height: 20px;
+
+    background-color: #636363;
+
+    transform: rotate(45deg);
+
+    transition-property: background-color;
+    transition-duration: 0.3s;
+
+    content: "";
+  }
+
+  &::after {
+    position: absolute;
+    top: calc(50% - 12px);
+
+    width: 2px;
+    height: 20px;
+
+    background-color: #636363;
+
+    transform: rotate(-45deg);
+
+    transition-property: background-color;
+    transition-duration: 0.3s;
+
+    content: "";
+  }
+}

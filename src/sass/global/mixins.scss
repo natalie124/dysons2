@@ -1,0 +1,35 @@
+@mixin font-l($size, $height, $color) {
+  font-family: $font-main;
+  font-size: $size;
+  line-height: $height;
+  font-weight: 300;
+  color: $color;
+}
+@mixin font-r($size, $height, $color) {
+  font-family: $font-main;
+  font-size: $size;
+  line-height: $height;
+  font-weight: 400;
+  color: $color;
+}
+@mixin font-m($size, $height, $color) {
+  font-family: $font-main;
+  font-size: $size;
+  line-height: $height;
+  font-weight: 500;
+  color: $color;
+}
+@mixin font-b($size, $height, $color) {
+  font-family: $font-main;
+  font-size: $size;
+  line-height: $height;
+  font-weight: 700;
+  color: $color;
+}
+@mixin font-monts-b($size, $height, $color) {
+  font-family: $font-title;
+  font-size: $size;
+  line-height: $height;
+  font-weight: 700;
+  color: $color;
+}

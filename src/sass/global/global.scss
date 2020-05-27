@@ -1,0 +1,155 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.visually-hidden,
+input[type="checkbox"],
+input[type="radio"] {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  width: 100%;
+  min-width: $width-min;
+
+  @include font-r(16px, 1.2, $black-font);
+}
+
+.scroll-hidden {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.scroll-hidden.scrollbar {
+  padding-right: 15px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+
+  object-fit: cover;
+}
+
+input {
+  appearance: none;
+
+  &::-ms-clear {
+    display: none;
+  }
+
+  &::-ms-reveal {
+    display: none;
+  }
+
+  &::-webkit-credentials-auto-fill-button,
+  &::-webkit-caps-lock-indicator {
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+  }
+}
+
+header,
+main,
+footer {
+  width: 100%;
+}
+
+.sprite {
+  display: none;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  @media (max-width: $tablet) {
+    padding: 0 20px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 0 10px;
+  }
+
+  &--np {
+    padding: 0;
+  }
+}
+
+.title {
+  width: 100%;
+  margin: 0;
+  padding: 60px 0 50px;
+
+  @include font-m(48px, 1.2, $black-font);
+  letter-spacing: 0.025em;
+  text-align: center;
+
+  @media (max-width: $desktop) {
+    font-size: 3.34vw;
+  }
+
+  @media (max-width: $laptop) {
+    font-size: 36px;
+  }
+
+  @media (max-width: $laptop) {
+    padding: 40px 0 35px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 30px 0 25px;
+  }
+}
+
+.page-title {
+  width: 100%;
+  margin: 0;
+  padding: 0 0 50px 30px;
+
+  @include font-m(48px, 1.2, $black-font);
+  letter-spacing: 0.025em;
+  text-align: left;
+
+  @media (max-width: $tablet) {
+    font-size: 36px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 0 0 24px 15px;
+
+    line-height: 1;
+  }
+}

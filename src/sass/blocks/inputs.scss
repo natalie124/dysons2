@@ -1,0 +1,171 @@
+.input-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  label {
+    margin-bottom: 5px;
+    margin-left: 10px;
+
+    @include font-r(13px, 26px, #888787);
+    letter-spacing: 0.01em;
+
+    cursor: pointer;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px 20px;
+    margin-bottom: 13px;
+
+    @include font-r(18px, 24px, #888787);
+
+    border: solid 1px $white;
+    background-color: #f8f8f8;
+
+    transition-property: border-color;
+    transition-duration: 0.3s;
+
+    outline: none;
+    appearance: none;
+
+    &::-ms-clear {
+      display: none;
+    }
+
+    &::-ms-reveal {
+      display: none;
+    }
+
+    &::-webkit-credentials-auto-fill-button,
+    &::-webkit-caps-lock-indicator {
+      visibility: hidden;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+    }
+
+    &:hover {
+      border-color: $grey-border;
+
+      transition-property: border-color;
+      transition-duration: 0.3s;
+    }
+
+    &:focus {
+      border-color:  #d2cccc;
+
+      transition-property: border-color;
+      transition-duration: 0.3s;
+    }
+  }
+}
+
+.input-item-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  .input-item {
+    width: 46%;
+  }
+}
+
+.input-check {
+  label {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    max-width: 270px;
+    min-height: 68px;
+    padding-left: 34px;
+    margin-bottom: 17px;
+
+    @include font-r(15px, 18px, #888787);
+    letter-spacing: 0.01em;
+
+    transition-property: color;
+    transition-duration: 0.3s;
+
+    cursor: pointer;
+
+    @media (max-width: $mobile) {
+      min-height: auto;
+    }
+
+    &:hover,
+    &:focus {
+      color: $black-font;
+
+      transition-property: color;
+      transition-duration: 0.3s;
+    }
+
+    &::before {
+      position: absolute;
+      top: 3px;
+      left: 0;
+
+      width: 16px;
+      height: 16px;
+
+      border: 2px solid #e9e9e9;
+      background-color: transparent;
+
+      transition-property: border-color, background-color;
+      transition-duration: 0.3s;
+
+      content: "";
+    }
+
+    &::after {
+      position: absolute;
+      top: 4px;
+      left: 4.5px;
+
+      width: 7px;
+      height: 9px;
+
+      background-color: transparent;
+      border-right: 2px solid transparent;
+      border-bottom: 2px solid transparent;
+
+      transform: rotate(45deg);
+
+      transition-property: border-color;
+      transition-duration: 0.3s;
+
+      content: "";
+    }
+
+    > span {
+      @include font-m(18px, 24px, $black);
+      padding-top: 5px;
+    }
+  }
+
+  input:checked+label {
+
+    &:before {
+      border: 2px solid $fuchsia;
+      background-color: $fuchsia;
+
+      transition-property: border-color, background-color;
+      transition-duration: 0.3s;
+    }
+
+    &:after {
+      border-color: $white;
+
+      transition-property: border-color;
+      transition-duration: 0.3s;
+    }
+  }
+}
+

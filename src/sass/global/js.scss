@@ -1,0 +1,17 @@
+.js-tabs-content.active {
+  display: block !important;
+
+  @media (min-width: 768) {
+    display: none;
+  }
+}
+
+.js-cart-favourites.active {
+  svg {
+    fill: $fuchsia;
+  }
+}
+
+.js-hide {
+  display: none;
+}

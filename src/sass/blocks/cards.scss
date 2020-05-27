@@ -1,0 +1,284 @@
+.cards {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+
+  width: 100%;
+  margin: 0;
+  padding: 0 20px 40px;
+
+  list-style: none;
+
+  @media (max-width: $mobile) {
+    justify-content: center;
+
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 20px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    width: 25%;
+    max-width: 290px;
+    padding: 0 10px 20px;
+
+    border-radius: 2px;
+
+    outline: none;
+
+    @media (max-width: $mobile) {
+      width: 50%;
+      max-width: 220px;
+      padding: 0 5px 10px;
+    }
+
+    &:hover,
+    &:focus {
+      .cards__container {
+        box-shadow: 0px 10px 50px 0px rgba(78,5,168,0.1);
+      }
+    }
+  }
+
+  &__container {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 100%;
+
+    background-color: $white;
+    border-radius: 2px;
+  }
+
+  &__favourites {
+    position: absolute;
+    z-index: 3;
+    top: 15px;
+    right: 15px;
+
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+
+    border: none;
+    background-color: transparent;
+
+    transition-property: transform;
+    transition-duration: 0.3s;
+
+    cursor: pointer;
+
+    @media (max-width: $tablet) {
+      top: 0;
+      right: 0;
+    }
+
+    svg {
+      width: 16px;
+      height: 14px;
+
+      fill: #d5d5d5;
+    }
+
+    &:hover,
+    &:focus {
+      transform: scale(1.3);
+    }
+
+    &.active svg {
+      fill: $fuchsia;
+    }
+  }
+
+  &__img {
+    position: relative;
+    width: 100%;
+    padding-bottom: 111.112%;
+    margin-bottom: 25px;
+
+    @media (max-width: $tablet) {
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: $mobile) {
+      margin-bottom: 10px;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-grow: 2;
+
+    width: 100%;
+    padding: 0 35px 15px;
+
+    @media (max-width: $tablet) {
+      padding-right: 19px;
+      padding-left: 19px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 100%;
+  }
+
+  &__category {
+    width: 100%;
+    margin-bottom: 10px;
+
+    @include font-m(12px, 1.2, #6a28a8);
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition-property: opacity;
+    transition-duration: 0.3s;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    margin-bottom: 16px;
+
+    @include font-r(20px, 1.2, $black-font);
+    text-decoration: none;
+
+    transition-property: opacity;
+    transition-duration: 0.3s;
+
+    @media (max-width: $tablet) {
+      font-size: 16px;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    align-self: flex-end;
+
+    width: 100%;
+    padding-top: 10px;
+    margin-top: auto;
+
+    border-top: 2px solid $grey-border;
+  }
+
+  &__price-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media (max-width: $tablet) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__old-price {
+    margin-right: 14px;
+
+    @include font-m(18px, 1.2, #c0c0c0);
+    text-decoration: line-through;
+
+    @media (max-width: $tablet) {
+      font-size: 13px;
+    }
+  }
+
+  &__current-price {
+    margin-bottom: 5px;
+
+    @include font-r(20px, 1.2, $black);
+
+    @media (max-width: $tablet) {
+      font-size: 14px;
+    }
+  }
+
+  &__cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 35px;
+    height: 35px;
+    margin: 0 -7.5px 0 auto;
+
+    border: none;
+    background-color: transparent;
+
+    cursor: pointer;
+
+    transition-property: transform, opacity;
+    transition-duration: 0.3s;
+
+    svg {
+      display: block;
+
+      width: 21px;
+      height: 21px;
+
+      fill: $fuchsia;
+    }
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+    }
+
+    &:active {
+      opacity: 0.5;
+
+      outline: none;
+    }
+  }
+}
