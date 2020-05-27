@@ -16,7 +16,8 @@ header.header
           form
             button(type="submit" title="Найти")
               +svg("loupe", 20, 20)
-            input(type="search" placeholder="Поиск")
+            input(type="search" placeholder="Поиск" name="search" id="search")
+            label.visually-hidden(for="search")
         a.header__favourites(href="#" title="Избранное")
           +svg("heart", 33, 29)
           span.header__favourites-number 12

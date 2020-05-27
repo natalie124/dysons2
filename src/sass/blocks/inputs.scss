@@ -97,13 +97,9 @@
 
     cursor: pointer;
 
-    p {
+    span {
       margin: 0;
       padding: 0;
-      width: 100%;
-    }
-
-    span {
       width: 100%;
     }
 
@@ -156,11 +152,15 @@
       content: "";
     }
 
-    p > span {
-      display: inline-block;
-      vertical-align: baseline;
-      @include font-m(18px, 24px, $black);
-      padding-top: 5px;
+    span {
+      span {
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        @include font-m(18px, 24px, $black);
+        padding-top: 5px;
+      }
     }
   }
 

@@ -121,7 +121,7 @@
     background-color: $fuchsia;
     border-radius: 4px;
 
-    transition-property: background-color opacity;
+    transition-property: background-color, opacity;
     transition-duration: 0.3s;
 
     cursor: pointer;

@@ -63,7 +63,7 @@
             <div class="header__search">
               <form><button type="submit" title="Найти"><svg width="20" height="20" aria-hidden="true">
                     <use xlink:href="#loupe"></use>
-                  </svg></button><input type="search" placeholder="Поиск"></form>
+                  </svg></button><input type="search" placeholder="Поиск" name="search" id="search"><label class="visually-hidden" for="search"></label></form>
             </div><a class="header__favourites" href="#" title="Избранное"><svg width="33" height="29" aria-hidden="true">
                 <use xlink:href="#heart"></use>
               </svg><span class="header__favourites-number">12</span>
@@ -253,30 +253,18 @@
                   </div>
                   <div class="order-registration-form__item">
                     <h2 class="order-registration-form__title">Способ доставки</h2>
-                    <div class="input-check"><input type="radio" name="delivery" id="order-registration-delivery-on-moscow" value="on-moscow"><label for="order-registration-delivery-on-moscow">
-                        <p>Курьерская доставка по Москве в пределах МКАД <span>300 <span>₽</span></span></p>
-                      </label></div>
-                    <div class="input-check"><input type="radio" name="delivery" id="order-registration-delivery-outside-moscow" value="outside-moscow" checked><label for="order-registration-delivery-outside-moscow">
-                        <p>Стоимость доставки за пределами МКАД составляет <span>700 <span>₽</span></span></p>
-                      </label></div>
-                    <div class="input-check"><input type="radio" name="delivery" id="order-registration-delivery-sdec" value="sdec"><label for="order-registration-delivery-sdec">
-                        <p>Доставка по России / СДЭК <span>800 <span>₽</span></span></p>
-                      </label></div>
-                    <div class="input-check"><input type="radio" name="delivery" id="order-registration-delivery-pony" value="pony"><label for="order-registration-delivery-pony">
-                        <p>Доставка по России / Пони экспресс <span>500 <span>₽</span></span></p>
-                      </label></div>
+                    <div class="input-check"><input type="radio" name="delivery" id="order-registration-delivery-on-moscow" value="on-moscow"><label for="order-registration-delivery-on-moscow"><span>Курьерская доставка по Москве в пределах МКАД <span>300 ₽</span></span></label></div>
+                    <div class="input-check"><input type="radio" name="delivery" id="order-registration-delivery-outside-moscow" value="outside-moscow" checked><label for="order-registration-delivery-outside-moscow"><span>Стоимость доставки за пределами МКАД составляет <span>700 ₽</span></span></label></div>
+                    <div class="input-check"><input type="radio" name="delivery" id="order-registration-delivery-sdec" value="sdec"><label for="order-registration-delivery-sdec"><span>Доставка по России / СДЭК <span>800 ₽</span></span></label></div>
+                    <div class="input-check"><input type="radio" name="delivery" id="order-registration-delivery-pony" value="pony"><label for="order-registration-delivery-pony"><span>Доставка по России / Пони экспресс <span>500 ₽</span></span></label></div>
                   </div>
                   <div class="order-registration-form__item">
                     <h2 class="order-registration-form__title">Способ оплаты</h2>
-                    <div class="input-check"><input type="radio" name="payment" id="order-registration-payment-courier" value="courier"><label for="order-registration-payment-courier">
-                        <p>При получении курьеру</p>
-                      </label></div>
-                    <div class="input-check"><input type="radio" name="payment" id="order-registration-payment-card" value="card" checked><label for="order-registration-payment-card">
-                        <p>Оплата картой на сайте</p>
-                      </label></div>
+                    <div class="input-check"><input type="radio" name="payment" id="order-registration-payment-courier" value="courier"><label for="order-registration-payment-courier"><span>При получении курьеру</span></label></div>
+                    <div class="input-check"><input type="radio" name="payment" id="order-registration-payment-card" value="card" checked><label for="order-registration-payment-card"><span>Оплата картой на сайте</span></label></div>
                   </div>
                 </section>
-                <section class="order-registration-info">
+                <div class="order-registration-info">
                   <div class="order-registration-info__item">
                     <div class="order-registration-info__title">Стоимость заказа</div>
                     <div class="order-registration-info__price"><span>144 100</span> ₽</div>
@@ -292,7 +280,7 @@
                   </div><button class="order-registration-info__submit" type="submit"><svg width="20" height="10" aria-hidden="true">
                       <use xlink:href="#wallet"></use>
                     </svg>Оформить заказ</button>
-                </section>
+                </div>
               </div>
             </form>
           </div>
