@@ -1,0 +1,26 @@
+section.modal.modal-buy-click.js-modal-buy-click.js-modal.js-hide
+  .modal__wrapper.modal-buy-click__wrapper
+    button.modal__close.button-close.js-close-btn(type="button" title="Закрыть" tabindex="1")
+    .modal__container.modal-buy-click__container
+      .modal__content.modal-buy-click__content
+        h2.modal-buy-click__title
+          +svg("cart", 30, 29)
+          | Купить в один клик
+        .modal-buy-click__img
+          +picture-png-webp("modal-add", 154, 144, "Стайлер Dyson HS01 Airwrap")
+        .modal-buy-click__info
+          form
+            p.modal-buy-click__name Стайлер Dyson HS01 Airwrap
+            .input-item
+              label(for="modal-buy-click-name") Ваше имя
+              input(type="text" name="name" id="modal-buy-click-name" required)
+            .input-item
+              label(for="modal-buy-click-phone") Телефон
+              input(type="tel" name="phone" id="modal-buy-click-phone" required)
+            .input-item
+              label(for="modal-buy-click-address") Адрес
+              input(type="text" name="name" id="modal-buy-click-address" required)
+            p.modal-buy-click__price <span>31 990</span> ₽
+            button.modal-buy-click__btn(type="submit")
+              +svg("wallet", 20, 19 )
+              | Купить

@@ -4723,6 +4723,232 @@ footer {
           transition-duration: 0.3s;
 }
 
+.modal-buy-click__wrapper {
+  max-width: 620px;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .modal-buy-click__wrapper {
+    max-width: 400px;
+  }
+}
+
+.modal-buy-click__container {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+@media (max-width: 767px) {
+  .modal-buy-click__container {
+    padding: 30px 20px;
+  }
+}
+
+.modal-buy-click__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+  .modal-buy-click__content {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.modal-buy-click__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+  padding: 0 0 40px;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #0f0f0f;
+}
+
+@media (max-width: 767px) {
+  .modal-buy-click__title {
+    text-align: left;
+    padding-right: 60px;
+  }
+  .modal-buy-click__title svg {
+    display: none;
+  }
+}
+
+.modal-buy-click__title svg {
+  width: 30px;
+  height: 29px;
+  margin-right: 28px;
+  fill: #b42079;
+}
+
+.modal-buy-click__img {
+  width: 100%;
+  max-width: 155px;
+  margin-right: 45px;
+}
+
+@media (max-width: 767px) {
+  .modal-buy-click__img {
+    display: none;
+  }
+}
+
+.modal-buy-click__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  width: 50%;
+  max-width: 320px;
+}
+
+@media (max-width: 767px) {
+  .modal-buy-click__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 20px;
+  }
+}
+
+.modal-buy-click__name {
+  margin: 0 0 25px;
+  padding: 0;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #0f0f0f;
+}
+
+.modal-buy-click__price {
+  margin: 0 0 25px;
+  padding: 0;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #0f0f0f;
+}
+
+.modal-buy-click__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-width: 200px;
+  min-height: 58px;
+  padding: 17px 22px 16px;
+  margin: 0 0 19px;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 19px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  background-color: #b42079;
+  border-radius: 4px;
+  -webkit-transition-property: background-color opacity;
+  transition-property: background-color opacity;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  cursor: pointer;
+  outline: none;
+}
+
+.modal-buy-click__btn:hover, .modal-buy-click__btn:focus {
+  background-color: #22b25c;
+  border-color: #22b25c;
+}
+
+.modal-buy-click__btn:active {
+  opacity: 0.5;
+}
+
+.modal-buy-click__btn svg {
+  width: 20px;
+  height: 19px;
+  margin-right: 28px;
+  fill: #ffffff;
+}
+
+.modal-buy-click__btn--close {
+  color: #b42079;
+  background-color: #ffffff;
+}
+
+.modal-buy-click__btn--close:hover, .modal-buy-click__btn--close:focus {
+  color: #ffffff;
+}
+
+.modal-buy-click__btn--close:hover svg, .modal-buy-click__btn--close:focus svg {
+  fill: #ffffff;
+}
+
+.modal-buy-click__btn--close svg {
+  width: 18px;
+  height: 26px;
+  margin-right: 19px;
+  fill: #b42079;
+  will-change: fill;
+  -webkit-transition-property: full;
+  transition-property: full;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
 .js-tabs-content.active {
   display: block !important;
 }
