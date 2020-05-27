@@ -6,7 +6,21 @@
 
     width: 100%;
 
-    overflow-x: hidden;
+    background-color: inherit;
+
+    &::before {
+      position: absolute;
+      left: -3px;
+      top: 5px;
+      z-index: 100;
+
+      width: 10px;
+      height: calc(100% - 5px);
+
+      background-color: $white;
+
+      content: "";
+    }
   }
 
   &__list {
@@ -17,17 +31,23 @@
 
     width: 100%;
     margin: 0 0 0 -3px;
-    padding: 0 0 15px;
+    padding: 0;
 
     list-style: none;
-
-    @media (max-width: $tablet) {
-      padding-bottom: 10px;
-    }
 
     @media (max-width: $mobile) {
       flex-direction: column;
       align-items: flex-start;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    padding-bottom: 15px;
+
+    @media (max-width: $tablet) {
+      padding-bottom: 10px;
     }
   }
 
@@ -99,6 +119,10 @@
    &:active {
     opacity: 0.5;
    }
+  }
+
+  &--dark &__wrapper::before {
+    background-color: $black-font;
   }
 
   &--dark &__link {

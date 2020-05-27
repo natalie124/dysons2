@@ -56,6 +56,8 @@
     var btn = menu.querySelector('.js-mobile-menu-btn');
     var container = menu.querySelector('.mobile-menu__container');
 
+    window.activateDropMenu();
+
     if (menu) {
 
       menu.classList.add(activeClass);

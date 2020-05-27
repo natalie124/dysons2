@@ -144,6 +144,8 @@ footer {
   text-align: left;
 
   @media (max-width: $tablet) {
+    padding-left: 10px;
+
     font-size: 36px;
   }
 

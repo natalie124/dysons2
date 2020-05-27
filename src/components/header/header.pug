@@ -32,5 +32,6 @@ header.header
         .main-menu__wrapper
           ul.main-menu__list
             each item in menuItems
-              li.main-menu__item
+              li.main-menu__item.js-drop-item
                 a.main-menu__link(href="#") !{item}
+                include ../drop-menu/drop-menu
