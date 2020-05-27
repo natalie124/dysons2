@@ -31,22 +31,28 @@ section.order-registration-form
     h2.order-registration-form__title Способ доставки
     .input-check
       input(type="radio" name="delivery" id="order-registration-delivery-on-moscow" value="on-moscow")
-      label(for="order-registration-delivery-on-moscow") Курьерская доставка по Москве в пределах МКАД <span>300 <span>₽</span></span>
+      label(for="order-registration-delivery-on-moscow")
+        p Курьерская доставка по Москве в пределах МКАД <span>300 <span>₽</span></span>
     .input-check
       input(type="radio" name="delivery" id="order-registration-delivery-outside-moscow" value="outside-moscow" checked)
-      label(for="order-registration-delivery-outside-moscow") Стоимость доставки за пределами МКАД составляет <span>700 <span>₽</span></span>
+      label(for="order-registration-delivery-outside-moscow")
+        p Стоимость доставки за пределами МКАД составляет <span>700 <span>₽</span></span>
     .input-check
       input(type="radio" name="delivery" id="order-registration-delivery-sdec" value="sdec")
-      label(for="order-registration-delivery-sdec") Доставка по России / СДЭК <span>800 <span>₽</span></span>
+      label(for="order-registration-delivery-sdec")
+        p Доставка по России / СДЭК <span>800 <span>₽</span></span>
     .input-check
       input(type="radio" name="delivery" id="order-registration-delivery-pony" value="pony")
-      label(for="order-registration-delivery-pony") Доставка по России / Пони экспресс <span>500 <span>₽</span></span>
+      label(for="order-registration-delivery-pony")
+        p Доставка по России / Пони экспресс <span>500 <span>₽</span></span>
 
   .order-registration-form__item
     h2.order-registration-form__title Способ оплаты
     .input-check
       input(type="radio" name="payment" id="order-registration-payment-courier" value="courier")
-      label(for="order-registration-payment-courier") При получении курьеру
+      label(for="order-registration-payment-courier")
+        p При получении курьеру
     .input-check
       input(type="radio" name="payment" id="order-registration-payment-card" value="card" checked)
-      label(for="order-registration-payment-card") Оплата картой на сайте
+      label(for="order-registration-payment-card")
+        p Оплата картой на сайте

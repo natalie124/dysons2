@@ -75,6 +75,7 @@
 
       content: "";
     }
+
     select {
       padding: 10px 38px 10px 20px;
 
@@ -89,6 +90,10 @@
 
       appearance: none;
       cursor: pointer;
+
+      &::-ms-expand {
+        display: none;
+      }
 
       &:hover,
       &:focus {

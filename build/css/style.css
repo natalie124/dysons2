@@ -466,6 +466,7 @@ footer {
 .button-close::before {
   position: absolute;
   top: calc(50% - 12px);
+  left: calc(50% - 3px);
   width: 2px;
   height: 20px;
   background-color: #636363;
@@ -481,6 +482,7 @@ footer {
 .button-close::after {
   position: absolute;
   top: calc(50% - 12px);
+  left: calc(50% - 3px);
   width: 2px;
   height: 20px;
   background-color: #636363;
@@ -1292,6 +1294,7 @@ footer {
 }
 
 .input-item label {
+  width: 100%;
   margin-bottom: 5px;
   margin-left: 10px;
   font-family: "Roboto", "Arial", sans-serif;
@@ -1388,6 +1391,7 @@ footer {
       -ms-flex-align: start;
           align-items: flex-start;
   max-width: 270px;
+  width: 100%;
   min-height: 68px;
   padding-left: 34px;
   margin-bottom: 17px;
@@ -1402,6 +1406,16 @@ footer {
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
   cursor: pointer;
+}
+
+.input-check label p {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.input-check label span {
+  width: 100%;
 }
 
 @media (max-width: 767px) {
@@ -1451,7 +1465,9 @@ footer {
   content: "";
 }
 
-.input-check label > span {
+.input-check label p > span {
+  display: inline-block;
+  vertical-align: baseline;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -2263,9 +2279,9 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -2289,9 +2305,31 @@ footer {
 }
 
 .drop-menu__item {
-  width: 226px;
+  width: 40%;
   margin-bottom: 20px;
   border-bottom: 1px solid #ebebeb;
+}
+
+.drop-menu__item:nth-child(odd) {
+  margin-right: 20%;
+}
+
+@media (max-width: 991px) {
+  .drop-menu__item {
+    width: 45%;
+  }
+  .drop-menu__item:nth-child(odd) {
+    margin-right: 10%;
+  }
+}
+
+@media (max-width: 767px) {
+  .drop-menu__item {
+    width: 100%;
+  }
+  .drop-menu__item:nth-child(odd) {
+    margin-right: 0;
+  }
 }
 
 .drop-menu__link {
@@ -3450,6 +3488,10 @@ footer {
      -moz-appearance: none;
           appearance: none;
   cursor: pointer;
+}
+
+.catalog__select select::-ms-expand {
+  display: none;
 }
 
 .catalog__select select:hover, .catalog__select select:focus {

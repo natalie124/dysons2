@@ -5,6 +5,7 @@
   align-items: flex-start;
 
   label {
+    width: 100%;
     margin-bottom: 5px;
     margin-left: 10px;
 
@@ -83,6 +84,7 @@
     align-items: flex-start;
 
     max-width: 270px;
+    width: 100%;
     min-height: 68px;
     padding-left: 34px;
     margin-bottom: 17px;
@@ -94,6 +96,16 @@
     transition-duration: 0.3s;
 
     cursor: pointer;
+
+    p {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+
+    span {
+      width: 100%;
+    }
 
     @media (max-width: $mobile) {
       min-height: auto;
@@ -144,7 +156,9 @@
       content: "";
     }
 
-    > span {
+    p > span {
+      display: inline-block;
+      vertical-align: baseline;
       @include font-m(18px, 24px, $black);
       padding-top: 5px;
     }

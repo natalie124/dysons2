@@ -19,7 +19,7 @@
     position: relative;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
 
@@ -45,10 +45,30 @@
   }
 
   &__item {
-    width: 226px;
+    width: 40%;
     margin-bottom: 20px;
 
     border-bottom: 1px solid $grey-border;
+
+    &:nth-child(odd) {
+      margin-right: 20%;
+    }
+
+    @media (max-width: $tablet) {
+      width: 45%;
+
+      &:nth-child(odd) {
+        margin-right: 10%;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      width: 100%;
+
+      &:nth-child(odd) {
+        margin-right: 0;
+      }
+    }
   }
 
   &__link {
