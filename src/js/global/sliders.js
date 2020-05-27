@@ -21,6 +21,37 @@
   });
 })();
 (function() {
+// для карточек
+  function activateSliders() {
+    var sliders = document.querySelectorAll('.cards-slider');
+
+    if (!sliders) {
+      return;
+    }
+
+    Array.prototype.forEach.call(sliders, function(it) {
+      var slider = it.querySelector('.cards-slider__wrapper');
+      var next = it.querySelector('.cards-slider__next');
+      var prev = it.querySelector('.cards-slider__prev');
+
+      console.log(slider);
+
+      var swiper = new Swiper(slider, {
+        slidesPerView: 'auto',
+        slidesPerGroup: 2,
+        navigation: {
+          nextEl: next,
+          prevEl: prev,
+        },
+        speed: 400,
+      });
+    });
+  }
+
+  activateSliders();
+})();
+
+(function() {
 // для галереи
   function activateSliders() {
     var sliders = document.querySelectorAll('.product-gallery');

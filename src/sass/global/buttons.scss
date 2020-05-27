@@ -54,6 +54,7 @@
   transition-duration: 0.3s;
 
   cursor: pointer;
+  outline: none;
 
   @media (max-width: $tablet) {
     width: 60px;
@@ -75,6 +76,15 @@
     transition-duration: 0.3s;
 
     content: "";
+  }
+
+   &--light {
+    border-radius: 50%;
+    background-color: rgba($fuchsia, 0.2);
+
+    &::before {
+      border-color: $white;
+    }
   }
 
   &--next {
