@@ -1,14 +1,10 @@
-extends pug/layout
-
-block variables
-  -let title = "Главная";
-
-block content
-  h1.visually-hidden Dysons shop
-  main
-    include components/main-banner/main-banner
-    include components/menu-catalog/menu-catalog
-    include components/novelties/novelties
-    include components/reviews/reviews
-    include components/advantages/advantages
-
+h1 Dysons
+ul
+  li
+    a(href="main.html") main.html - Главная
+  li
+    a(href="catalog.html") catalog.html - Каталог
+  li
+    a(href="product.html") product.html - Страница товара
+  li
+    a(href="cart.html") cart.html - Оформление заказа
