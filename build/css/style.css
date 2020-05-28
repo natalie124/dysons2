@@ -107,6 +107,24 @@ button:-moz-focusring {
   }
 }
 
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @-webkit-keyframes mobile-menu-active {
   0% {
     left: -150%;
@@ -5329,4 +5347,21 @@ footer {
   .js-drop-item:hover::after {
     display: none;
   }
+}
+
+.js-hidden {
+  display: none;
+  opacity: 0;
+}
+
+.js-show-btn-active::before, .js-show-btn-active::after {
+  top: 10px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.js-show-item {
+  opacity: 1;
+  -webkit-animation: fadein 0.6s ease-out;
+          animation: fadein 0.6s ease-out;
 }

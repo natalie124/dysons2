@@ -1,4 +1,4 @@
-section.catalog
+section.catalog.js-show-container
   .container
     h1.page-title.page-title--left  Уход за волосами
     .catalog__filters
@@ -17,7 +17,7 @@ section.catalog
           label.visually-hidden(for="sort") Сортировать
   .container.container--np
       ul.cards
-        li.cards__item(tabindex="0")
+        li.cards__item.js-show-item(tabindex="0")
           .cards__container
             button.cards__favourites.js-card-favourites(type="button" title="Добавить в избранное")
               +svg("heart", 16, 14)
@@ -33,8 +33,7 @@ section.catalog
                   span.cards__current-price 29 900 <span>₽</span>
                 button.cards__cart.js-card-cart(type="button" title="Добавить в корзину")
                   +svg("cart", 21, 21)
-
-        li.cards__item(tabindex="0")
+        li.cards__item.js-show-item(tabindex="0")
           .cards__container
             button.cards__favourites.js-card-favourites(type="button" title="Добавить в избранное")
               +svg("heart", 16, 14)
@@ -49,7 +48,7 @@ section.catalog
                   span.cards__current-price 29 900 <span>₽</span>
                 button.cards__cart.js-card-cart(type="button" title="Добавить в корзину")
                   +svg("cart", 21, 21)
-        li.cards__item(tabindex="0")
+        li.cards__item.js-show-item(tabindex="0")
           .cards__container
             button.cards__favourites.js-card-favourites(type="button" title="Добавить в избранное")
               +svg("heart", 16, 14)
@@ -64,7 +63,7 @@ section.catalog
                   span.cards__current-price 49 900 <span>₽</span>
                 button.cards__cart.js-card-cart(type="button" title="Добавить в корзину")
                   +svg("cart", 21, 21)
-        li.cards__item(tabindex="0")
+        li.cards__item.js-show-item(tabindex="0")
           .cards__container
             button.cards__favourites.js-card-favourites(type="button" title="Добавить в избранное")
               +svg("heart", 16, 14)
@@ -80,7 +79,7 @@ section.catalog
                   span.cards__current-price 29 900 <span>₽</span>
                 button.cards__cart.js-card-cart(type="button" title="Добавить в корзину")
                   +svg("cart", 21, 21)
-        li.cards__item(tabindex="0")
+        li.cards__item.js-show-item(tabindex="0")
           .cards__container
             button.cards__favourites.js-card-favourites(type="button" title="Добавить в избранное")
               +svg("heart", 16, 14)
@@ -96,8 +95,7 @@ section.catalog
                   span.cards__current-price 29 900 <span>₽</span>
                 button.cards__cart.js-card-cart(type="button" title="Добавить в корзину")
                   +svg("cart", 21, 21)
-
-        li.cards__item(tabindex="0")
+        li.cards__item.js-show-item(tabindex="0")
           .cards__container
             button.cards__favourites.js-card-favourites(type="button" title="Добавить в избранное")
               +svg("heart", 16, 14)
@@ -112,7 +110,7 @@ section.catalog
                   span.cards__current-price 29 900 <span>₽</span>
                 button.cards__cart.js-card-cart(type="button" title="Добавить в корзину")
                   +svg("cart", 21, 21)
-        li.cards__item(tabindex="0")
+        li.cards__item.js-show-item(tabindex="0")
           .cards__container
             button.cards__favourites.js-card-favourites(type="button" title="Добавить в избранное")
               +svg("heart", 16, 14)
@@ -127,7 +125,172 @@ section.catalog
                   span.cards__current-price 49 900 <span>₽</span>
                 button.cards__cart.js-card-cart(type="button" title="Добавить в корзину")
                   +svg("cart", 21, 21)
-        li.cards__item(tabindex="0")
+        li.cards__item.js-show-item(tabindex="0")
+          .cards__container
+            button.cards__favourites.js-card-favourites(type="button" title="Добавить в избранное")
+              +svg("heart", 16, 14)
+            a.cards__img(href="#")
+              +picture-png-webp("card-4", 270, 300, "Dyson Airwrap Complete")
+            .cards__content
+              .cards__info
+                a.cards__category(href="#") Фен
+                a.cards__title(href="#") Dyson Supersonic
+              .cards__price
+                .cards__price-container
+                  span.cards__old-price 129 900
+                  span.cards__current-price 29 900 <span>₽</span>
+                button.cards__cart.js-card-cart(type="button" title="Добавить в корзину")
+                  +svg("cart", 21, 21)
+        // скрытые блоки
+        li.cards__item.js-show-item.js-hidden(tabindex="0")
+          .cards__container
+            button.cards__favourites.js-card-favourites(type="button" title="Добавить в избранное")
+              +svg("heart", 16, 14)
+            a.cards__img(href="#")
+              +picture-png-webp("card-4", 270, 300, "Dyson Airwrap Complete")
+            .cards__content
+              .cards__info
+                a.cards__category(href="#") Фен
+                a.cards__title(href="#") Dyson Supersonic
+              .cards__price
+                .cards__price-container
+                  span.cards__old-price 129 900
+                  span.cards__current-price 29 900 <span>₽</span>
+                button.cards__cart.js-card-cart(type="button" title="Добавить в корзину")
+                  +svg("cart", 21, 21)
+        li.cards__item.js-show-item.js-hidden(tabindex="0")
+          .cards__container
+            button.cards__favourites.js-card-favourites(type="button" title="Добавить в избранное")
+              +svg("heart", 16, 14)
+            a.cards__img(href="#")
+              +picture-png-webp("card-4", 270, 300, "Dyson Airwrap Complete")
+            .cards__content
+              .cards__info
+                a.cards__category(href="#") Фен
+                a.cards__title(href="#") Dyson Supersonic
+              .cards__price
+                .cards__price-container
+                  span.cards__old-price 129 900
+                  span.cards__current-price 29 900 <span>₽</span>
+                button.cards__cart.js-card-cart(type="button" title="Добавить в корзину")
+                  +svg("cart", 21, 21)
+        li.cards__item.js-show-item.js-hidden(tabindex="0")
+          .cards__container
+            button.cards__favourites.js-card-favourites(type="button" title="Добавить в избранное")
+              +svg("heart", 16, 14)
+            a.cards__img(href="#")
+              +picture-png-webp("card-4", 270, 300, "Dyson Airwrap Complete")
+            .cards__content
+              .cards__info
+                a.cards__category(href="#") Фен
+                a.cards__title(href="#") Dyson Supersonic
+              .cards__price
+                .cards__price-container
+                  span.cards__old-price 129 900
+                  span.cards__current-price 29 900 <span>₽</span>
+                button.cards__cart.js-card-cart(type="button" title="Добавить в корзину")
+                  +svg("cart", 21, 21)
+        li.cards__item.js-show-item.js-hidden(tabindex="0")
+          .cards__container
+            button.cards__favourites.js-card-favourites(type="button" title="Добавить в избранное")
+              +svg("heart", 16, 14)
+            a.cards__img(href="#")
+              +picture-png-webp("card-4", 270, 300, "Dyson Airwrap Complete")
+            .cards__content
+              .cards__info
+                a.cards__category(href="#") Фен
+                a.cards__title(href="#") Dyson Supersonic
+              .cards__price
+                .cards__price-container
+                  span.cards__old-price 129 900
+                  span.cards__current-price 29 900 <span>₽</span>
+                button.cards__cart.js-card-cart(type="button" title="Добавить в корзину")
+                  +svg("cart", 21, 21)
+        li.cards__item.js-show-item.js-hidden(tabindex="0")
+          .cards__container
+            button.cards__favourites.js-card-favourites(type="button" title="Добавить в избранное")
+              +svg("heart", 16, 14)
+            a.cards__img(href="#")
+              +picture-png-webp("card-4", 270, 300, "Dyson Airwrap Complete")
+            .cards__content
+              .cards__info
+                a.cards__category(href="#") Фен
+                a.cards__title(href="#") Dyson Supersonic
+              .cards__price
+                .cards__price-container
+                  span.cards__old-price 129 900
+                  span.cards__current-price 29 900 <span>₽</span>
+                button.cards__cart.js-card-cart(type="button" title="Добавить в корзину")
+                  +svg("cart", 21, 21)
+        li.cards__item.js-show-item.js-hidden(tabindex="0")
+          .cards__container
+            button.cards__favourites.js-card-favourites(type="button" title="Добавить в избранное")
+              +svg("heart", 16, 14)
+            a.cards__img(href="#")
+              +picture-png-webp("card-4", 270, 300, "Dyson Airwrap Complete")
+            .cards__content
+              .cards__info
+                a.cards__category(href="#") Фен
+                a.cards__title(href="#") Dyson Supersonic
+              .cards__price
+                .cards__price-container
+                  span.cards__old-price 129 900
+                  span.cards__current-price 29 900 <span>₽</span>
+                button.cards__cart.js-card-cart(type="button" title="Добавить в корзину")
+                  +svg("cart", 21, 21)
+        li.cards__item.js-show-item.js-hidden(tabindex="0")
+          .cards__container
+            button.cards__favourites.js-card-favourites(type="button" title="Добавить в избранное")
+              +svg("heart", 16, 14)
+            a.cards__img(href="#")
+              +picture-png-webp("card-4", 270, 300, "Dyson Airwrap Complete")
+            .cards__content
+              .cards__info
+                a.cards__category(href="#") Фен
+                a.cards__title(href="#") Dyson Supersonic
+              .cards__price
+                .cards__price-container
+                  span.cards__old-price 129 900
+                  span.cards__current-price 29 900 <span>₽</span>
+                button.cards__cart.js-card-cart(type="button" title="Добавить в корзину")
+                  +svg("cart", 21, 21)
+
+
+        li.cards__item.js-show-item.js-hidden(tabindex="0")
+          .cards__container
+            button.cards__favourites.js-card-favourites(type="button" title="Добавить в избранное")
+              +svg("heart", 16, 14)
+            a.cards__img(href="#")
+              +picture-png-webp("card-4", 270, 300, "Dyson Airwrap Complete")
+            .cards__content
+              .cards__info
+                a.cards__category(href="#") Фен
+                a.cards__title(href="#") Dyson Supersonic
+              .cards__price
+                .cards__price-container
+                  span.cards__old-price 129 900
+                  span.cards__current-price 29 900 <span>₽</span>
+                button.cards__cart.js-card-cart(type="button" title="Добавить в корзину")
+                  +svg("cart", 21, 21)
+
+        li.cards__item.js-show-item.js-hidden(tabindex="0")
+          .cards__container
+            button.cards__favourites.js-card-favourites(type="button" title="Добавить в избранное")
+              +svg("heart", 16, 14)
+            a.cards__img(href="#")
+              +picture-png-webp("card-4", 270, 300, "Dyson Airwrap Complete")
+            .cards__content
+              .cards__info
+                a.cards__category(href="#") Фен
+                a.cards__title(href="#") Dyson Supersonic
+              .cards__price
+                .cards__price-container
+                  span.cards__old-price 129 900
+                  span.cards__current-price 29 900 <span>₽</span>
+                button.cards__cart.js-card-cart(type="button" title="Добавить в корзину")
+                  +svg("cart", 21, 21)
+
+        li.cards__item.js-show-item.js-hidden(tabindex="0")
           .cards__container
             button.cards__favourites.js-card-favourites(type="button" title="Добавить в избранное")
               +svg("heart", 16, 14)
@@ -145,4 +308,4 @@ section.catalog
                   +svg("cart", 21, 21)
   .container
     .catalog__show
-      button(type="button") Показать еще
+      button.js-show-btn(type="button" data-text="Скрыть" data-visible="8") Показать еще <span class="js-show-all"></span>

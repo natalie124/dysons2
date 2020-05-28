@@ -83,3 +83,23 @@
     }
   }
 }
+
+.js-hidden {
+  display: none;
+  opacity: 0;
+}
+
+.js-show-btn-active {
+  &::before,
+  &::after {
+    top: 10px;
+    transform: rotate(-45deg);
+  }
+}
+
+.js-show-item {
+  opacity: 1;
+
+  animation: fadein 0.6s ease-out;
+}
+
